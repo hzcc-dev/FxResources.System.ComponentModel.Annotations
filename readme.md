@@ -1,6 +1,8 @@
 # FxResources.System.ComponentModel.Annotations
 
-This repository aims to provide localization support for default validation messages and exception prompts for the .NET **System.ComponentModel.Annotations** library.
+[中文](./docs/readme.zh-Hans.md)
+
+This repository provides localized validation messages and exception messages for the .NET **System.ComponentModel.Annotations** library.
 
 When using `ValidationAttribute` for model validation, if you want to provide users with localized error messages instead of the default English messages, you would have to specify the `ErrorMessage` parameter. This can be cumbersome if you have a large number of models to validate. By adding localized language resources, we can obtain localized messages without specifying `ErrorMessage`.
 

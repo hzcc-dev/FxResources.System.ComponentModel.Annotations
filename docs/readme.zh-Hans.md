@@ -1,6 +1,6 @@
 # FxResources.System.ComponentModel.Annotations
 
-本仓库旨在为 .NET **System.ComponentModel.Annotations** 库提供默认验证消息和异常提示信息的本地化支持。
+本项目为 .NET **System.ComponentModel.Annotations** 库提供本地化的验证消息和异常提示信息。
 
 在使用 ValidationAttribute 进行模型验证时，如果你想给用户一个本地化的错误信息而不是默认的英文信息，你将不得不指定 ErrorMessage 参数。
 如果有大量模型需要验证，这样会非常麻烦。通过添加本地化的语言资源，我们就可以得到本地化的消息而不必指定 ErrorMessage。
