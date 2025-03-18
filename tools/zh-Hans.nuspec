@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>System.ComponentModel.Annotations.zh-Hans</id>
+    <version>8.0.0</version>
+    <title>System.ComponentModel.Annotations 简体中文资源</title>
+    <authors>softworm</authors>
+    <owners>softworm</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/softworm</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>此程序包包含 System.ComponentModel.Annotations 的简体中文附属程序集。</description>
+	<readme>readme.md</readme>
+    <language>zh-Hans</language>
+    <tags>.NET Validation Localization</tags>
+	<dependencies>
+	  <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+
+  <files>
+	<file src="..\bin\Release\net8.0\zh-Hans\System.ComponentModel.Annotations.resources.dll" target="lib\net8.0\zh-Hans" />
+	<file src="..\docs\readme.zh-Hans.md" target="readme.md" />
+  </files>
+</package>
