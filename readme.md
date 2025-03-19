@@ -17,7 +17,7 @@ Install the appropriate NuGet package based on the version of .NET you are using
 
 For example:
 ```
-Install-Package FxResources.System.ComponentModel.Annotations.zh-Hans -Version 7.0.0
+Install-Package FxResources.System.ComponentModel.Annotations.zh-Hans -Version 6.0.0
 ```
 
 ### Set the Culture

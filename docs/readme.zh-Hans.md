@@ -14,7 +14,7 @@
 ### 安装包
 根据你使用的.NET版本和需要的本地化语言安装合适的 nuget 包，示例如下：
 ```
-Install-Package FxResources.System.ComponentModel.Annotations.zh-Hans -Version 7.0.0
+Install-Package FxResources.System.ComponentModel.Annotations.zh-Hans -Version 6.0.0
 ```
 ### 设置文化
 如果你没有使用国际化功能，只想为用户提供本地化的模型验证消息，那么需要设置默认的UI文化。

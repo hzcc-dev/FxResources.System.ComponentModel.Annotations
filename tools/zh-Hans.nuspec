@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>FxResources.System.ComponentModel.Annotations.zh-Hans</id>
-    <version>7.0.0</version>
+    <version>6.0.0</version>
     <title>System.ComponentModel.Annotations 简体中文资源</title>
     <authors>softworm</authors>
     <owners>softworm</owners>
@@ -14,12 +14,12 @@
     <language>zh-Hans</language>
     <tags>.NET Validation Localization</tags>
 	<dependencies>
-	  <group targetFramework="net7.0" />
+	  <group targetFramework="net6.0" />
     </dependencies>
   </metadata>
 
   <files>
-	<file src="..\bin\Release\net7.0\zh-Hans\System.ComponentModel.Annotations.resources.dll" target="lib\net7.0\zh-Hans" />
+	<file src="..\bin\Release\net6.0\zh-Hans\System.ComponentModel.Annotations.resources.dll" target="lib\net6.0\zh-Hans" />
 	<file src="readme.md" />
   </files>
 </package>
