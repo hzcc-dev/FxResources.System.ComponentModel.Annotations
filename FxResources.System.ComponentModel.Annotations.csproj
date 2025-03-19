@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
     <PackageId>$(MSBuildProjectName)</PackageId>
     <Authors>softworm</Authors>
     <Product>$(MSBuildProjectName)</Product>
-    <Version>6.0.0</Version>
+    <Version>5.0.0</Version>
     <Description>Provides localization support for default validation messages and exception prompts for the System.ComponentModel.Annotations library.</Description>
   </PropertyGroup>
 
