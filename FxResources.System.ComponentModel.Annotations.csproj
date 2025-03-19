@@ -1,25 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+    <Authors>softworm</Authors>
+    <Product>$(MSBuildProjectName)</Product>
+    <Version>9.0.0</Version>
+    <Description>Provides localization support for default validation messages and exception prompts for the System.ComponentModel.Annotations library.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="SR.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>SR.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Remove="SR.resx" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="SR.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>SR.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <None Include="SR.resx" />
   </ItemGroup>
 
 </Project>

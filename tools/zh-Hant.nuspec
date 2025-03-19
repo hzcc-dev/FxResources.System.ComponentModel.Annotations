@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>FxResources.System.ComponentModel.Annotations.zh-Hant</id>
+    <version>9.0.0</version>
+    <title>System.ComponentModel.Annotations 繁體中文資源</title>
+    <authors>softworm</authors>
+    <owners>softworm</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/hzcc-dev/FxResources.System.ComponentModel.Annotations</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>此套裝程式包含 System.ComponentModel.Annotations 的繁體中文附屬程式集。</description>
+	<readme>readme.md</readme>
+    <language>zh-Hant</language>
+    <tags>.NET Validation Localization</tags>
+	<dependencies>
+	  <group targetFramework="net9.0" />
+    </dependencies>
+  </metadata>
+
+  <files>
+	<file src="..\bin\Release\net9.0\zh-Hant\System.ComponentModel.Annotations.resources.dll" target="lib\net9.0\zh-Hant" />
+	<file src="readme.md" />
+  </files>
+</package>

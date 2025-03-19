@@ -1,23 +1,73 @@
-本仓库旨在为 .NET **System.ComponentModel.Annotations** 库提供默认验证消息和异常提示信息的本地化支持。帮助开发者在不同语言环境下更便捷地使用该库，提升开发效率和用户体验。
+# FxResources.System.ComponentModel.Annotations
 
-在使用ValidationAttribute时，如果你不想使用默认的英文信息，你将不得不提供一个本地化的ErrorMessage。
-这在有大量模型需要验证时非常麻烦。所以我们希望可以直接提供本地化的语言资源，这样就不必单独指定ErrorMessage。
+[中文](./docs/readme.zh-Hans.md)
 
-## 关键特性
-- 多语言支持：提供多种语言的本地化资源，已支持中文（简体）、中文（繁体）。
-- 持续更新：随着.NET版本的迭代，本地化资源也将同步更新，确保兼容性和准确性。
-- 社区驱动：欢迎开发者参与翻译贡献，共同完善本地化支持。
-## 目录结构
-- SR.resx：存放中立语言的资源文件，与官方原始资源相同。
-- SR.{culture}.resx：存放相应文化的本地化资源文件。
-## 如何参与
-- 翻译贡献：选择一种语言，提交翻译后本地化资源。
-- 反馈问题：在 Issues 中报告翻译错误或缺失的语言支持。
-## 使用方法
-依据资源卫星dll的查找方式，我们必须将生成的culture目录和dll复制到 **System.ComponentModel.Annotations.dll**所在目录。
-具体来说：
-- 如果你在开发环境，System.ComponentModel.Annotations.dll 不会复制到程序输出目录，因此你必须把资源dll复制到dotnet目录。（通常为 Program Files\dotnet\shared\Microsoft.NETCore.App\{version}\）
-- 在发布程序时，如果选择standalone模式，那么 System.ComponentModel.Annotations.dll 不会复制到程序输出目录，因此你必须把资源dll复制到运行环境的dotnet目录。
-- 在发布程序时，如果选择了standalone模式，那么 System.ComponentModel.Annotations.dll 会复制到程序输出目录，因此你需要把资源dll复制到程序输出目录。
+This project provides localized validation messages and exception prompts for the .NET **System.ComponentModel.Annotations** library.
 
-欢迎加入我们，提供更多文化的本地化支持！
+When using `ValidationAttribute` for model validation, if you want to provide users with localized error messages instead of the default English messages, you would have to specify the `ErrorMessage` parameter. This can be cumbersome if you have a large number of models to validate. By adding localized language resources, we can obtain localized messages without specifying `ErrorMessage`.
+
+## Key Features
+- **Multilingual Support**: Provides localization resources for multiple languages, with support for Simplified Chinese and Traditional Chinese already available.
+- **Continuous Updates**: Localization resources will be updated in sync with .NET versions to ensure compatibility and accuracy.
+- **Community-Driven**: Developers are welcome to contribute translations to help improve localization support.
+
+## Usage
+### Install the Package
+Install the appropriate NuGet package based on the version of .NET you are using and the localization language you need.
+
+For example:
+```
+Install-Package FxResources.System.ComponentModel.Annotations.zh-Hans -Version 8.0.0
+```
+
+### Set the Culture
+If you are not using internationalization features and just want to provide localized model validation messages to users, you need to set the default UI culture.
+``` csharp
+// program.cs
+CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo("zh-Hans");
+```
+
+If you are using ASP.NET Core's internationalization features, you only need to add the culture you are using to the supported list. You should have already done this under normal circumstances.
+```
+services.AddRequestLocalization(t =>
+{
+    t.AddSupportedUICultures("zh-CN", "zh-TW", "en");
+});
+```
+
+### Remove `ErrorMessage`
+You no longer need to specify `ErrorMessage` on validation attributes.
+``` csharp
+public class FooUser
+{
+    [Required]
+    public string Name { get; set; }
+    [Required]
+    public string Email { get; set; }
+    [Required]
+    [Range(1, 100)]
+    public int? Age { get; set; }
+}
+```
+Assuming no parameters are passed, you will get the following error messages:
+```
+Age字段为必填项。
+Name字段为必填项。
+Email字段为必填项。
+```
+
+## How to Contribute
+- **Translation Contribution**: Choose a language and submit the translated localization resources.
+- **Report Issues**: Report translation errors or missing language support in the Issues section.
+
+Welcome to join us and provide localization support for more cultures!
+
+## Directory Structure
+- `SR.resx`: Contains the neutral language resource file, which is identical to the official original resources.
+- `SR.{culture}.resx`: Contains localized resource files for the corresponding culture.
+
+*Note: The content of `SR.resx` may vary slightly between different versions of .NET, so please make sure you are using the correct version or branch.*
+
+## Available language packages
+- [中文（简体）](https://www.nuget.org/packages/FxResources.System.ComponentModel.Annotations.zh-Hans/)
+- [中文（繁体）](https://www.nuget.org/packages/FxResources.System.ComponentModel.Annotations.zh-Hant/)
