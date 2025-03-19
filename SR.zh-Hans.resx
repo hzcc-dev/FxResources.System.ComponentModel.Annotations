@@ -130,7 +130,7 @@
     <value>自定义验证类型“{0}”必须是公共的。</value>
   </data>
   <data name="RangeAttribute_ValidationError" xml:space="preserve">
-    <value>字段{0}必须介于{1}和{2}之间。</value>
+    <value>字段{0}必须在{1}到{2}之间。</value>
   </data>
   <data name="DeniedValuesAttribute_Invalid" xml:space="preserve">
     <value>{0}字段等于DeniedValuesAttribute中指定的值之一。</value>
@@ -184,7 +184,7 @@
     <value>字段{0}无效。</value>
   </data>
   <data name="RangeAttribute_ValidationError_MaxExclusive" xml:space="preserve">
-    <value>字段{0}必须介于{1}和{2}（不含）之间。</value>
+    <value>字段{0}必须在{1}到{2}（不含）之间。</value>
   </data>
   <data name="EnumDataTypeAttribute_TypeNeedsToBeAnEnum" xml:space="preserve">
     <value>类型“{0}”需要表示枚举类型。</value>
@@ -256,7 +256,7 @@
     <value>{0}字段为必填项。</value>
   </data>
   <data name="RangeAttribute_ValidationError_MinExclusive" xml:space="preserve">
-    <value>字段{0}必须介于{1}（不含）和{2}之间。</value>
+    <value>字段{0}必须在{1}（不含）到{2}之间。</value>
   </data>
   <data name="CompareAttribute_MustMatch" xml:space="preserve">
     <value>“{0}”和“{1}”不匹配。</value>
@@ -271,7 +271,7 @@
     <value>类型“{1}”中的CustomValidationAttribute方法“{0}”必须返回System.ComponentModel.DataAnnotations.ValidationResult。使用System.ComponentModel.DataAnnotations.ValidationResult.Success代表成功。</value>
   </data>
   <data name="RangeAttribute_ValidationError_MinExclusive_MaxExclusive" xml:space="preserve">
-    <value>字段{0}必须介于{1}（不含）和{2}（不含）之间。</value>
+    <value>字段{0}必须在{1}（不含）到{2}（不含）之间。</value>
   </data>
   <data name="UIHintImplementation_ControlParameterKeyOccursMoreThanOnce" xml:space="preserve">
     <value>位置{0}处具有值“{1}”的键参数出现多次。</value>
